@@ -1,5 +1,6 @@
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']
-runner = "probe-rs run --chip RP2040"
+# runner = "probe-rs run --chip RP2040"
+runner = "sudo /nix/store/qzhc7ibb4wv7vgw4xhmfdvwcpzxap2ms-picotool-1.1.2/bin/picotool load -f -t elf"
 
 [build]
 target = "thumbv6m-none-eabi"        # Cortex-M0 and Cortex-M0+
